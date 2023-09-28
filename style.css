@@ -1,0 +1,49 @@
+body {
+
+    background-color: antiquewhite;
+
+}
+
+.completed {
+
+    text-decoration: line-through;
+    color: grey;
+}
+
+h1 {
+
+    color: brown;
+    text-decoration: underline;
+
+}
+
+input {
+
+    background-color: rosybrown;
+
+}
+
+button {
+
+    background-color: rosybrown;
+    color: brown;
+    cursor: pointer;
+
+}
+
+ul {
+
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 3px;
+}
+
+.deleteButton {
+
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+}
