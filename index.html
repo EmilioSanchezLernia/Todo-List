@@ -10,20 +10,21 @@
 </head>
 
 <body>
-    <div>
-        <h1>What to do today?</h1>
-        <p id="completedTasks">0 tasks completed</p>
+    <div id="container">
+        <div>
+            <h1>My ToDo</h1>
+            <p id="completedTasks">0 completed</p>
+        </div>
+        <div>
+            <input type="text" id="inputField" name="input">
+            <button id="btn">OK</button>
+        </div>
+        <small>
+            <p id="info"></p>
+        </small>
+        <ul>
+        </ul>
     </div>
-    <div>
-        <input type="text" id="inputField" name="input" placeholder="Write tasks here">
-        <button id="btn">+</button>
-    </div>
-    <small>
-        <p id="info"></p>
-    </small>
-    <ul>
-    </ul>
-
     <script src='main.js'></script>
 </body>
 

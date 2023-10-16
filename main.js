@@ -34,7 +34,7 @@ function handleButtonClick() {
 
     // Check that the text is not empty
     if (text === "") {
-        info.innerText = "Input field must not be empty"
+        info.innerText = "Input must not be empty"
         input.value = "";
         return;
     } else {
@@ -51,6 +51,11 @@ function handleButtonClick() {
         const item = document.createElement('li');
         list.appendChild(item);
 
+        // Create span inside of li element
+        const itemLabel = document.createElement('span')
+        itemLabel.innerText = text;
+        item.appendChild(itemLabel);
+
         // Give each li a delete button and delete button class
         const deleteButton = document.createElement('button')
         deleteButton.innerText = "🗑️";
@@ -63,7 +68,7 @@ function handleButtonClick() {
             // Check if deleted element is already completed and change the count if it is
             if (item.getAttribute('class') == 'completed') {
                 completedCount--
-                completedTasks.innerText = `${completedCount} tasks completed${completedCount > 0 ? '!' : ''}`
+                completedTasks.innerText = `${completedCount} completed`
             }
             // Delete the object from the array.
             const correctIndex = todoList.map(t => t.name).indexOf(item.childNodes[1].textContent);
@@ -73,11 +78,6 @@ function handleButtonClick() {
             // Remove li which also deletes the corresponding child elements
             item.remove();
         })
-
-        // Create span inside of li element
-        const itemLabel = document.createElement('span')
-        itemLabel.innerText = text;
-        item.appendChild(itemLabel);
 
 
         // Add a listener to the span
