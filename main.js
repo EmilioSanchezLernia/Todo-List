@@ -22,6 +22,7 @@ function changeStatus(todoText, status) {
 button.addEventListener('click', function () { handleButtonClick(); })
 input.addEventListener('keypress', function (event) {
     if (event.key === "Enter") {
+        event.preventDefault();
         handleButtonClick();
     }
 })
@@ -35,10 +36,12 @@ function handleButtonClick() {
     // Check that the text is not empty
     if (text === "") {
         info.innerText = "Input must not be empty"
+        info.classList.add('infoBlink')
         input.value = "";
         return;
     } else {
         info.innerText = "";
+        info.classList.remove('infoBlink')
     }
     // If there is text
     if (input.value != "") {
