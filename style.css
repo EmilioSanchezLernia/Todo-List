@@ -61,12 +61,14 @@ body {
 .completed {
 
     text-decoration: line-through;
+    vertical-align: middle;
     color: grey;
+    font-size: 23px;
 }
 
 h1 {
 
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 12px;
     color: black;
     font-size: 50px;
@@ -90,7 +92,7 @@ h1 {
     margin-top: 7px;
     font-style: italic;
     font-family: Arial, sans-serif;
-    color: red;
+    color: rgb(200, 0, 0);
     font-weight: bold;
 }
 
@@ -134,8 +136,8 @@ input:focus {
     border-radius: 3px;
     border: 0.2px solid black;
     height: 29px;
-    width: 40px;
-    font-size: 14.8px;
+    width: 44px;
+    font-size: 16.5px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     margin: 0;
@@ -181,6 +183,8 @@ li {
 span {
 
     cursor: pointer;
+    font-size: 23px;
+    font-weight: 500;
 }
 
 .deleteButton {
