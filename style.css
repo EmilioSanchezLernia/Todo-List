@@ -12,9 +12,9 @@ body {
     justify-content: center;
 }
 
+
 #container {
 
-    top: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,23 +26,23 @@ body {
     margin-top: 10px;
     padding-bottom: 5px;
     box-shadow: 0px 5px 10px -5.3px rgb(120, 120, 120);
-    animation: fadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation: fadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards;
 }
 
 @keyframes fadeIn {
 
     0% {
-        top: -50vh;
+        transform: translateY(-100%);
         opacity: 0;
     }
 
     50% {
-        top: 7vh;
+        transform: translateY(25%);
     }
 
     100% {
         opacity: 1;
-        top: 1vh;
+        transform: translateY(0%);
     }
 }
 
