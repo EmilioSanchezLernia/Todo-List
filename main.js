@@ -35,13 +35,13 @@ function handleButtonClick() {
 
     // Check that the text is not empty
     if (text === "") {
-        info.innerText = "Input must not be empty"
-        info.classList.add('infoBlink')
+        info.innerText = "Input must not be empty";
+        info.classList.add('infoBlink');
         input.value = "";
         return;
     } else {
         info.innerText = "";
-        info.classList.remove('infoBlink')
+        info.classList.remove('infoBlink');
     }
     // If there is text
     if (input.value != "") {
@@ -71,7 +71,7 @@ function handleButtonClick() {
             // Check if deleted element is already completed and change the count if it is
             if (item.getAttribute('class') == 'completed') {
                 completedCount--
-                completedTasks.innerText = `${completedCount} completed`
+                completedTasks.innerText = `${completedCount} completed`;
             }
             // Delete the object from the array.
             const correctIndex = todoList.map(t => t.name).indexOf(item.childNodes[1].textContent);
@@ -87,25 +87,25 @@ function handleButtonClick() {
         itemLabel.addEventListener('click', function () {
 
             // Toggle complete/uncomplete
-            if (item.getAttribute('class') == 'completed') {
-                item.setAttribute('class', '')
+            if (item.classList.contains('completed')) {
+                item.classList.toggle('completed')
                 // Change status on object in array to false
-                let clickedText = item.childNodes[1].textContent;
+                let clickedText = item.firstChild.textContent;
                 changeStatus(clickedText, false);
                 console.log(todoList);
                 // Derease completed element by 1
                 completedCount--
             } else {
-                item.setAttribute('class', 'completed')
+                item.classList.toggle('completed')
                 // Change status on object in array to true
-                let clickedText = item.childNodes[1].textContent;
+                let clickedText = item.firstChild.textContent;
                 changeStatus(clickedText, true);
                 console.log(todoList);
                 //Increase completed eelement by 1
                 completedCount++
             }
             // Using tenary operator to add a little ! if completed tasks is greater than 0
-            completedTasks.innerText = `${completedCount} tasks completed${completedCount > 0 ? '!' : ''}`
+            completedTasks.innerText = `${completedCount} completed`;
 
         })
     }
