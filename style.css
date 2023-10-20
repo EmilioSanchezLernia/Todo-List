@@ -200,4 +200,10 @@ span:hover {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: filter 0.25s ease;
+}
+
+.deleteButton:hover {
+
+    filter: brightness(0.73);
 }
