@@ -187,6 +187,11 @@ span {
     font-weight: 500;
 }
 
+span:hover {
+
+    text-decoration: line-through;
+}
+
 .deleteButton {
 
     margin-left: 10.5px;
